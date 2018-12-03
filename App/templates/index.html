@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='index/css/index.css' )}}"/>
+		<link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='index/font/iconfont.css' )}}"/>
+		<script src="{{ url_for( 'static', filename='index/js/jquery-1.12.3.js' )}}"></script>
+		<script src="{{ url_for( 'static', filename='index/js/jquery.cookie.js' )}}"></script>
+		<script src="{{ url_for( 'static', filename='index/js/move.js' )}}"></script>
+		<script src="{{ url_for( 'static', filename='index/js/index.js' )}}"></script>
+	</head> 
+	<body>    
+		<div class="top "> 
+			<div class="main"> 
+				<div class="top-left clearfix">
+				 
+					<b class="iconfont icon-7"></b> 
+					<a href="javascript:;">第五大道首页</a>
+					<b class="iconfont icon-dianhua"></b>
+					<span>贵宾专线：4008-6767-38</span>
+				</div>
+				<ul>
+
+                    {% if user %}
+                         <li><a href="#">{{ user.username }}</a></li>
+					    <li><a href="{{ url_for('blue.logout') }}">退出</a></li>
+
+
+                    {% else %}
+                        <li><a href="{{ url_for('blue.login') }}">登录</a></li>
+					    <li><a href="{{ url_for('blue.register') }}"><b class="icon-liwu iconfont "></b>注册</a></li>
+                    {% endif %}
+
+
+
+					<li class="gouwu">
+						<a href="javascript:;">我的第五大道<b class="iconfont icon-sanjiaoxia"></b></a>
+						
+					</li>
+					<li><a href="javascript:;">帮助中心</a></li>
+					<li class="phonexia"><a href="javascript:;">手机版下载<b class="iconfont icon-erweima"></b>
+					<b class="iconfont icon-sanjiaoxia"></b></a></li>
+					
+				</ul>
+				<div class="cart2"> 
+							<a href="#">我的订单</a>
+							<a href="javascript:;">我的收藏</a>
+							<a href="javascript:;">已购商品</a>
+							<a href="javascript:;">我的礼卷</a>
+							<a href="javascript:;">我的积分</a>
+				</div>
+				<div class="phone">
+					<img src=" {{ url_for( 'static', filename='index/img/images/qr (1).jpg' )}}"/>
+					<p>扫描下载APP</p> 
+					<p>立即<span>赠送50元</span></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="logo">
+			<div class="main">
+				
+				<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/logo.jpg' )}}" /></a>
+				<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/yijian.jpg' )}}" class="img1"/></a>
+				
+				<div class="search">
+					<div class="ainput">
+						<input type="text" placeholder="唇部彩妆"/><button>搜索</button>
+					</div>
+					<ul>
+						<li><a href="javascript:;">太阳镜</a></li>
+						<li><a href="javascript:;">美妆</a></li>
+						<li><a href="javascript:;">户外运动</a></li>
+						<li><a href="javascript:;">箱包</a></li>
+						<li><a href="javascript:;">配饰</a></li>
+						<li><a href="javascript:;">腕表</a></li>
+					</ul>
+				</div>
+				<div class="cart1">
+					<img src="{{ url_for( 'static', filename='index/img/images/v30cart (1).png' )}}" />
+					<span>购物袋&nbsp;(&nbsp;<b class="sumnum">0</b>&nbsp;)</span>
+				</div>
+			</div>	
+		</div>
+		<!--logo-->
+		<div class="nav">
+			<div class="main">
+				<ul >
+					<li id="first">
+						<a href="javascript:;" class="first" >商品分类</a>
+					</li>
+					<li><a href="javascript:;">品牌</a></li>
+					<li><a href="javascript:;">最新</a></li>
+					<li><a href="javascript:;">女士</a></li>
+					<li><a href="javascript:;">男士</a></li>
+					<li><a href="javascript:;">生活馆</a></li>
+					<li><a href="javascript:;">海外馆</a></li> 
+					<li><a href="javascript:;">时尚</a></li>
+					<li><a href="javascript:;">特惠</a></li>
+					<li><a href="javascript:;">礼品区</a></li>
+					<li><a href="javascript:;">到店</a></li>
+				</ul>
+				<ol id="accordion">
+					<li><p></p><a href="javascript:;">品牌授权，官方验真</a></li>
+					<li><p></p><a href="javascript:;">尊贵品牌会员服务</a></li>
+					<li><p></p><a href="javascript:;">商务部诚信示范企业</a></li>
+				</ol>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		<div class="banner">
+			<div class="main1" id="box">
+				
+				
+				
+				
+				
+<!-- ------------------  轮播图在这里   ------------------ -->				
+<!-- ------------------  轮播图在这里   ------------------ -->				
+<!-- ------------------  轮播图在这里   ------------------ -->				
+				<ul id="ul1">
+					
+					<!--
+					用Ajax获取后端数据，使用DOM操作动态创建下面的li节点
+
+					<li><img src=""></li>
+					<li><img src=""></li>
+					<li><img src=""></li>
+					<li><img src=""></li>
+					-->
+					
+				</ul>
+				
+<!-- ------------------  轮播图在这里   ------------------ -->				
+<!-- ------------------  轮播图在这里   ------------------ -->				
+<!-- ------------------  轮播图在这里   ------------------ -->				
+
+				
+				
+				<img src="{{ url_for( 'static', filename='index/img/images/left-1.jpg' )}}" class="left-b" id="left1"/>
+				<img src="{{ url_for( 'static', filename='index/img/images/right1.jpg' )}}"  class="right-b" id="right1"/>
+				<ol id="ol1">
+					<li class="active"></li> 
+					<li></li> 
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+		</div>  
+		<div class="content">
+			<div class="main">
+				<a href="javascript:;">
+                    <img src="{{ url_for( 'static', filename='index/img/images/mainx_brandship (1).png' )}}" class="img2"/>
+                </a>
+				<ul class="facade">
+					<li>
+						<a href="javascript:;">
+                            <img src="{{ url_for( 'static', filename='index/img/images/149180234138_234x329.jpg' )}}"/>
+                        </a>
+						<div class="tbox">
+							<a href="javascript:;">
+                                <img src="{{ url_for( 'static', filename='index/img/images/14477287608582 (2).png' )}}"/>
+                            </a>
+							<p>Calvin Klein</p>
+							<p>卡尔文.克莱恩</p>
+						</div>
+					</li>
+					<li>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/149180936447_234x329.jpg' )}}"/></a>
+						<div class="tbox">
+							<a href="javascript:;">
+                                <img src="{{ url_for( 'static', filename='index/img/images/14477378676085 (1).png' )}}"/>
+                            </a>
+							<p>Hugo&nbsp;Boss</p>
+							<p>雨果.波尔</p>
+						</div>
+					</li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/149239067616_234x329.jpg' )}}"/></a>
+						<div class="tbox">
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477432452427 (1).png' )}}"/></a>
+							<p>Ray-Ban</p>
+							<p>雷朋</p>
+						</div>
+					</li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150753271868_236x329.jpg' )}}"/></a>
+						<div class="tbox">
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477282116284 (1).png' )}}"/></a>
+							<p>Breguet</p>
+							<p>宝玑</p>
+						</div>
+					</li>
+					<li class="last1"><a href=""><img src="{{ url_for( 'static', filename='index/img/images/150753271894_236x329.jpg' )}}"/></a>
+						<div class="tbox">
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477267323870 (1).png' )}}"/></a>
+							<p>Bally</p>
+							<p>巴利</p>
+						</div>
+					</li>
+
+				</ul>
+				<img src="{{ url_for( 'static', filename='index/img/images/hotstore_t (1).jpg' )}}" style="width: 230px;"/>
+				<ul class="qjd">
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14399544846782.jpg' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477248162526.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477258985459.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477267323870.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477267323919.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477272296808.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477274206917.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477282116284.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477284515625.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477306892349.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477308355912.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477312236406.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477314136401.png' )}}"/></a></li>
+					<li><a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14477315605971.png' )}}"/></a></li>
+
+				</ul>
+				<img src="{{ url_for( 'static', filename='index/img/images/shopcenter.jpg' )}}"/>
+				<p class="title3">
+					<span><a href="javascript:;">热卖品牌</a></span>
+					<span><a href="javascript:;">新品推荐</a></span>
+					<span><a href="javascript:;">明星同款</a></span>
+				</p>
+
+
+
+
+<!-- ------------------  商品在这里   ------------------ -->
+<!-- ------------------  商品在这里   ------------------ -->
+<!-- ------------------  商品在这里   ------------------ -->
+<!-- ------------------  商品在这里   ------------------ -->
+
+
+				<div class="con1" id="gg">
+					<img src="{{ url_for( 'static', filename='index/img/images/150753039957_366x515.jpg' )}}"/>
+					<ul id="mygoods">
+
+                        <!--
+
+						<li>
+							<img src="img/images/150831323345_1571x2000.JPG">
+							<div class="parcel">
+								<p>Y PROJECT</p>
+								<p>￥4699</p>
+							</div>
+						</li>
+						<li>
+							<img src="img/images/150831323345_1571x2000.JPG">
+							<div class="parcel">
+								<p>Y PROJECT</p>
+								<p>￥4699</p>
+							</div>
+						 </li>
+						-->
+
+					</ul>
+				</div>
+
+
+
+<!-- ------------------  商品在这里   ------------------ -->
+<!-- ------------------  商品在这里   ------------------ -->
+<!-- ------------------  商品在这里   ------------------ -->
+<!-- ------------------  商品在这里   ------------------ -->
+
+
+
+
+
+				<img src="{{ url_for( 'static', filename='index/img/images/shopcenter (1).jpg' )}}"/>
+				<p class="title4">
+					<a href="javascript:;">经典箱包</a>
+					<a href="javascript:;">典藏腕表</a>
+					<a href="javascript:;">精致配饰</a>
+					<a href="javascript:;">个人化妆</a>
+					<a href="javascript:;">时尚鞋服</a>
+				</p>
+				<img src="{{ url_for( 'static', filename='index/img/images/goodtitle1 (1).jpg' )}}"/>
+
+
+				<!--con2 经典箱包-->
+
+
+				<div class="con2">
+					<div class="goods1">
+						<ul class="goods1ul1">
+							<li><a href="javascript:;">单肩包</a></li>
+							<li><a href="javascript:;">手提包</a></li>
+							<li><a href="javascript:;">手提斜挎包</a></li>
+							<li><a href="javascript:;">双肩包</a></li>
+							<li><a href="javascript:;">手拿包</a></li>
+							<li><a href="javascript:;">钱包</a></li>
+							<li><a href="javascript:;">小皮件</a></li>
+							<li><a href="javascript:;">旅行箱/包</a></li>
+							<li><a href="javascript:;">斜挎包</a></li>
+							<li><a href="javascript:;">化妆箱/包</a></li>
+						</ul>
+						<div class="goods1b">
+							<ul class="goods1b1">
+
+							</ul>
+							<ol class="old2">
+								<li class="active2"></li>
+								<li></li>
+								<li></li>
+							</ol>
+						</div>
+					</div>
+					<div class="con2img">
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150753035361_390x370 (1).jpg' )}}" /></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520415180_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416347_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416423_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416492_275x180.jpg' )}}"/></a>
+					</div>
+
+				</div>
+
+				<!--典藏腕表-->
+
+				<img src="{{ url_for( 'static', filename='index/img/images/goodtitle2 (2).jpg' )}}"/>
+				<div class="con2">
+					<div class="goods1">
+						<ul class="goods1ul1">
+							<li><a href="javascript:;">单肩包</a></li>
+							<li><a href="javascript:;">手提包</a></li>
+							<li><a href="javascript:;">手提斜挎包</a></li>
+							<li><a href="javascript:;">双肩包</a></li>
+							<li><a href="javascript:;">手拿包</a></li>
+							<li><a href="javascript:;">钱包</a></li>
+							<li><a href="javascript:;">小皮件</a></li>
+							<li><a href="javascript:;">旅行箱/包</a></li>
+							<li><a href="javascript:;">斜挎包</a></li>
+							<li><a href="javascript:;">化妆箱/包</a></li>
+						</ul>
+						<div class="goods1b">
+							<ul>
+
+							</ul>
+							<ol class="old3">
+								<li class="active2"></li>
+								<li></li>
+								<li></li>
+							</ol>
+						</div>
+					</div>
+					<div class="con2img">
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150753035213_390x370 (2).jpg' )}}" /></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150399151359_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150399151212_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150399151112_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150391834154_275x180.jpg' )}}"/></a>
+					</div>
+
+				</div>
+
+				<!--精致配饰-->
+				<img src="{{ url_for( 'static', filename='index/img/images/goodtitle6 (2).jpg' )}}" />
+				<div class="con2">
+					<div class="goods1">
+						<ul class="goods1ul1">
+							<li><a href="javascript:;">单肩包</a></li>
+							<li><a href="javascript:;">手提包</a></li>
+							<li><a href="javascript:;">手提斜挎包</a></li>
+							<li><a href="javascript:;">双肩包</a></li>
+							<li><a href="javascript:;">手拿包</a></li>
+							<li><a href="javascript:;">钱包</a></li>
+							<li><a href="javascript:;">小皮件</a></li>
+							<li><a href="javascript:;">旅行箱/包</a></li>
+							<li><a href="javascript:;">斜挎包</a></li>
+							<li><a href="javascript:;">化妆箱/包</a></li>
+						</ul>
+						<div class="goods1b">
+							<ul>
+
+							</ul>
+							<ol class="old4">
+								<li class="active2"></li>
+								<li></li>
+								<li></li>
+							</ol>
+						</div>
+					</div>
+					<div class="con2img">
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150814254699_390x370.jpg' )}}" /></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150545486551_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150545486515_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150545486653_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150545486689_275x180.jpg' )}}"/></a>
+					</div>
+
+				</div>
+
+
+				<!--个人化妆-->
+				<img src="{{ url_for( 'static', filename='index/img/images/goodtitle4 (1).jpg' )}}"/>
+				<div class="con2">
+					<div class="goods1">
+						<ul class="goods1ul1">
+							<li><a href="javascript:;">单肩包</a></li>
+							<li><a href="javascript:;">手提包</a></li>
+							<li><a href="javascript:;">手提斜挎包</a></li>
+							<li><a href="javascript:;">双肩包</a></li>
+							<li><a href="javascript:;">手拿包</a></li>
+							<li><a href="javascript:;">钱包</a></li>
+							<li><a href="javascript:;">小皮件</a></li>
+							<li><a href="javascript:;">旅行箱/包</a></li>
+							<li><a href="javascript:;">斜挎包</a></li>
+							<li><a href="javascript:;">化妆箱/包</a></li>
+						</ul>
+						<div class="goods1b">
+							<ul>
+
+							</ul>
+							<ol class="old">
+								<li class="active2"></li>
+								<li></li>
+								<li></li>
+							</ol>
+						</div>
+					</div>
+					<div class="con2img">
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150814254643_390x370.jpg' )}}" /></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416772_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416347_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416759_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416765_275x180.jpg' )}}"/></a>
+					</div>
+
+				</div>
+
+				<!--时尚鞋服-->
+				<img src="{{ url_for( 'static', filename='index/img/images/goodtitle3 (1).jpg' )}}"/>
+				<div class="con2">
+					<div class="goods1">
+						<ul class="goods1ul1">
+							<li><a href="javascript:;">单肩包</a></li>
+							<li><a href="javascript:;">手提包</a></li>
+							<li><a href="javascript:;">手提斜挎包</a></li>
+							<li><a href="javascript:;">双肩包</a></li>
+							<li><a href="javascript:;">手拿包</a></li>
+							<li><a href="javascript:;">钱包</a></li>
+							<li><a href="javascript:;">小皮件</a></li>
+							<li><a href="javascript:;">旅行箱/包</a></li>
+							<li><a href="javascript:;">斜挎包</a></li>
+							<li><a href="javascript:;">化妆箱/包</a></li>
+						</ul>
+						<div class="goods1b">
+							<ul>
+
+							</ul>
+							<ol class="old2">
+								<li class="active2"></li>
+								<li></li>
+								<li></li>
+							</ol>
+						</div>
+					</div>
+					<div class="con2img">
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150814254538_390x370.jpg' )}}" /></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416487_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416521_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416566_275x180.jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150520416581_275x180.jpg' )}}"/></a>
+					</div>
+				</div>
+				<img src="{{ url_for( 'static', filename='index/img/images' )}}/promotiontitle (1).jpg"/>
+				<div class="con3">
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150754354183_598x293 (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150640838090_293x293 (2).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150640838124_293x293 (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150640838079_293x293 (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150640838050_293x293 (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/150451239098_598x293 (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/3bank (1).jpg' )}}" class="right_c"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/1promotionpic (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/2promotionpic (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/3promotionpic (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/4promotionpic (2).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/5promotionpic (1).jpg' )}}"/></a>
+					<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/6promotionpic (1).jpg' )}}"/></a>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="main">
+				<div class="btm1">
+					<ul>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message01 (1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">正品保障</p>
+							<a href="javascript:;"><p>品牌授权,官方验真</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message02 (1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">专柜发货</p>
+							<a href="javascript:;"><p>专柜直接或到店自提</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message03 (1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">无忧售后</p>
+							<a href="javascript:;"><p>7天无理由退换货</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message04 (1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">VIP服务</p>
+							<a href="javascript:;"><p>享品牌会员售前售后服务</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message05 (1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">权威荣誉</p>
+							<a href="javascript:;"><p>商务部授予诚信示范企业</p></a>
+						</li>
+					</ul>
+				</div>
+				<div class="btm2">  
+					<ul>
+						<li>
+							<p>服务保障</p>
+							<a href="javascript:;">品牌授权正品</a>
+							<a href="javascript:;">品牌客服</a>
+							<a href="javascript:;">预约到店体验</a>
+							<a href="javascript:;">7天无理由退换</a>
+						</li>
+						<li>
+							<p>使用帮助</p>
+							<a href="javascript:;">常见问题</a>
+							<a href="javascript:;">会员制度</a>
+							<a href="javascript:;">集团采购</a>
+							<a href="javascript:;">礼品卡</a>
+						</li>
+						<li>
+							<p>支付方式</p>
+							<a href="javascript:;">到店付款</a>
+							<a href="javascript:;">货到付款</a>
+							<a href="javascript:;">在线支付</a>
+							<a href="javascript:;">余额支付</a>
+							<a href="javascript:;">分期付款</a>
+						</li>
+						<li>
+							<p>配送方式</p>
+							<a href="javascript:;">配送说明</a>
+							<a href="javascript:;">专柜自提</a>
+							<a href="javascript:;">运费说明</a>
+							<a href="javascript:;">验货签收</a>
+						</li>
+						<li>
+							<p>售后服务</p>
+							<a href="javascript:;">品牌售后</a>
+							<a href="javascript:;">售后咨询</a>
+							<a href="javascript:;">退换政策</a>
+							<a href="javascript:;">发票保障</a>
+						</li>
+						<li>
+							<p>第五大道APP</p>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message06 (1).jpg' )}}"/></a>
+						</li>
+						<li>
+							<p>第五大道微博</p>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message07 (1).jpg' )}}"/></a>
+						</li>
+						
+					</ul>
+				</div>
+				<div class="footer">
+					<div class="footer1">
+						<a href="javascript:;">箱包</a><span>|</span>
+						<a href="javascript:;">美妆 </a><span>|</span>
+						<a href="javascript:;">服饰 </a><span>|</span>
+						<a href="javascript:;">腕表</a><span>|</span>
+						<a href="javascript:;">配饰 </a><span>|</span>
+						<a href="javascript:;">鞋靴</a><span>|</span>
+						<a href="javascript:;">特惠</a><span>|</span>
+						<a href="javascript:;">礼品区</a>
+						
+					</div>
+					<div class="footer1 footer2">
+						<p>
+							<a href="javascript:;">关于第五大道</a><span>|</span>
+							<a href="javascript:;">网站地图</a><span>|</span>
+							<a href="javascript:;">品牌合作专区</a> <span>|</span>
+							<a href="javascript:;">媒体聚焦 </a><span>|</span>
+							<a href="javascript:;">商务合作</a><span>|</span> 
+							<a href="javascript:;">商家合作</a> <span>|</span>
+							<a href="javascript:;">加入第五大道</a> <span>|</span>
+							<a href="javascript:;">友情链接</a> <span>|</span>
+							<a href="javascript:;">奢尚志</a> <span>|</span>
+							<a href="javascript:;">联系我们</a> <span>|</span>
+							<a href="javascript:;">投诉建议</a>
+						</p>
+						<p>
+							Copyright © 2008-2016 瑞美嘉信国际信息技术（北京）有限公司  版权所有京ICP备09012701号-1 京公网安备110105007400号 食品经营许可证号
+						</p>
+					</div>
+					<div class="footer3">
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/14567178388519 (1).jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message10 (1).jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='index/img/images/footer_message11 (1).jpg' )}}"/></a>
+						
+					</div>
+				</div>
+			</div>
+		</div>  
+		
+		<ul class="side">
+			<li><a href="#"></a></li>
+			<li>
+				<a href="javascript:;"></a>
+				<p class="side1">我的资产</p>
+			</li>
+			<li>
+				<a href="javascript:;"></a>
+				<p class="side2">我喜欢的商品</p>
+			</li>
+			<li>
+				<a href="javascript:;"></a>
+				<p class="side3">联系客服</p>
+			</li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li class="callback"><a href="javascript:;"></a></li>
+		</ul>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title></title>
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='register/css/register.css' )}}"/>
+
+		<script src="{{ url_for( 'static', filename='index/js/jquery-1.12.3.js' )}}"></script>
+		<script src="{{ url_for( 'static', filename='register/js/register.js' )}}"></script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="main">
+				<a href="index.html"><img src="{{ url_for( 'static', filename='register/img/logo.jpg' )}}"/></a>
+				<span class="header-line"></span> 
+				<span>注册第五大道</span>
+				
+				<p>客服热线：4008-6767-38</p>
+				<i class="topi"></i>
+				
+			</div>
+		</div>   
+		<!--内容 -->
+		<div class="con"> 
+			<div class="main">
+				<div class="con1">
+					<div class="content">
+
+						<form action="/register/" method="post">
+
+							<p>注册第五大道</p>
+							<input class="iphone" type="text" placeholder="用户名" id="inputusername" name="username"/>
+
+                            <p style="color: red;display: none " id="name_err">用户名不能为空</p>
+                            <p style="color: blue;display: none " id="name_ok">用户名可用</p>
+                            <p style="color: red;display: none " id="name_no">用户名已存在</p>
+
+
+
+
+							<i class="int2"></i>
+							<input class="pwd" type="password" placeholder="请输入6位以上密码" id="pwd1" name="password"/>
+                            <p style="color: red;display: none " id="pwd1_err">请输入正确的密码</p>
+							<i class="int3"></i>
+							<input class="pwd2" type="password" placeholder="确认密码" id="pwd2"/>
+                            <p style="color: red;display: none " id="pwd2_err">两次密码不一致</p>
+
+							<i class="int4"></i> 
+							<input type="submit" value="立即注册" class="enter" id="bt"/>
+
+
+						</form>
+
+
+
+
+
+						<div class="con-footer"> 
+							<input type="checkbox" class="check"/><span>我已阅读并同意<b>《第五大道用户协议》</b></span>
+							<a href="#">已有账号</a>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		
+		
+        <div class="bottom">
+			<div class="main">
+				<div class="btm1">
+					<ul>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message01%20(1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">正品保障</p>
+							<a href="javascript:;"><p>品牌授权,官方验真</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message02%20(1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">专柜发货</p>
+							<a href="javascript:;"><p>专柜直接或到店自提</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message03%20(1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">无忧售后</p>
+							<a href="javascript:;"><p>7天无理由退换货</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message04%20(1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">VIP服务</p>
+							<a href="javascript:;"><p>享品牌会员售前售后服务</p></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message05%20(1).jpg' )}}"/></a>
+							<p style="font-weight:bold ;padding-top: 10px;color: #000000;">权威荣誉</p>
+							<a href="javascript:;"><p>商务部授予诚信示范企业</p></a>
+						</li>
+					</ul>
+				</div>
+				<div class="btm2">
+					<ul>
+						<li>
+							<p>服务保障</p>
+							<a href="javascript:;">品牌授权正品</a>
+							<a href="javascript:;">品牌客服</a>
+							<a href="javascript:;">预约到店体验</a>
+							<a href="javascript:;">7天无理由退换</a>
+						</li>
+						<li>
+							<p>使用帮助</p>
+							<a href="javascript:;">常见问题</a>
+							<a href="javascript:;">会员制度</a>
+							<a href="javascript:;">集团采购</a>
+							<a href="javascript:;">礼品卡</a>
+						</li>
+						<li>
+							<p>支付方式</p>
+							<a href="javascript:;">到店付款</a>
+							<a href="javascript:;">货到付款</a>
+							<a href="javascript:;">在线支付</a>
+							<a href="javascript:;">余额支付</a>
+							<a href="javascript:;">分期付款</a>
+						</li>
+						<li>
+							<p>配送方式</p>
+							<a href="javascript:;">配送说明</a>
+							<a href="javascript:;">专柜自提</a>
+							<a href="javascript:;">运费说明</a>
+							<a href="javascript:;">验货签收</a>
+						</li>
+						<li>
+							<p>售后服务</p>
+							<a href="javascript:;">品牌售后</a>
+							<a href="javascript:;">售后咨询</a>
+							<a href="javascript:;">退换政策</a>
+							<a href="javascript:;">发票保障</a>
+						</li>
+						<li>
+							<p>第五大道APP</p>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message06%20(1).jpg' )}}"/></a>
+						</li>
+						<li>
+							<p>第五大道微博</p>
+							<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message07%20(1).jpg' )}}"/></a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="footer">
+					<div class="footer1">
+						<a href="javascript:;">箱包</a><span>|</span>
+						<a href="javascript:;">美妆 </a><span>|</span>
+						<a href="javascript:;">服饰 </a><span>|</span>
+						<a href="javascript:;">腕表</a><span>|</span>
+						<a href="javascript:;">配饰 </a><span>|</span>
+						<a href="javascript:;">鞋靴</a><span>|</span>
+						<a href="javascript:;">特惠</a><span>|</span>
+						<a href="javascript:;">礼品区</a>
+
+					</div>
+					<div class="footer1 footer2">
+						<p>
+							<a href="javascript:;">关于第五大道</a><span>|</span>
+							<a href="javascript:;">网站地图</a><span>|</span>
+							<a href="javascript:;">品牌合作专区</a> <span>|</span>
+							<a href="javascript:;">媒体聚焦 </a><span>|</span>
+							<a href="javascript:;">商务合作</a><span>|</span>
+							<a href="javascript:;">商家合作</a> <span>|</span>
+							<a href="javascript:;">加入第五大道</a> <span>|</span>
+							<a href="javascript:;">友情链接</a> <span>|</span>
+							<a href="javascript:;">奢尚志</a> <span>|</span>
+							<a href="javascript:;">联系我们</a> <span>|</span>
+							<a href="javascript:;">投诉建议</a>
+						</p>
+						<p>
+							Copyright © 2008-2016 瑞美嘉信国际信息技术（北京）有限公司  版权所有京ICP备09012701号-1 京公网安备110105007400号 食品经营许可证号
+						</p>
+					</div>
+					<div class="footer3">
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/14567178388519%20(1).jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message10%20(1).jpg' )}}"/></a>
+						<a href="javascript:;"><img src="{{ url_for( 'static', filename='register/img/images/footer_message11%20(1).jpg' )}}"/></a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

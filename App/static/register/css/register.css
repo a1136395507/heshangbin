@@ -1,0 +1,232 @@
+btn1html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,img{margin:0;padding:0;}
+
+body{color:#333;font: 12px/200% 'microsoft yahei','微软雅黑',Helvetica,Arial,Tahoma,"黑体",'宋体',sans-serif;}
+fieldset,img{border:none;}
+em,i,b,strong{font-style:normal;font-weight:normal;}
+ul li,ol li{list-style:none;}
+a{text-decoration:none;}
+.clearfix:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;font-size:1px;}
+.main{ 
+	width: 1210px;
+	margin: 0 auto; 
+	position:relative;
+}
+
+.bottom{
+	height: 601px;
+	/*border-top:1px solid #c9c9c9 ;*/
+	background: url(../img/images/footer_message_bg.jpg) center; 
+}
+.btm1{
+	height: 117px;
+	border-bottom: 1px solid #c9c9c9 ;
+}
+.btm1 li{
+	width: 230px;
+	height: 64px;
+	margin-top: 26px;
+	padding-left: 10px;
+	float: left;
+}
+.btm1 li img{
+	float: left;
+	margin-right: 10px;
+}
+.btm1 li p{
+	color: #333333;
+}
+.btm1 li a:hover{
+	/*color: red;*/
+	text-decoration: underline;
+}
+.btm2{
+	
+	height: 283px;
+	padding-left: 20px;
+}
+.btm2 li{
+	float: left;
+	height: 160px;
+	width: 185px;
+}
+.btm2 li:nth-child(6),.btm2 li:nth-child(7){
+	width: 130px;
+}
+.btm2 li p{
+	color: #000000;
+	line-height: 42px;
+	font-weight: bold;
+}
+.btm2 li a{
+	line-height: 24px;
+	display: block;
+	color: #333333;
+}
+.btm2 li a:hover{
+		text-decoration: underline;
+}
+.footer{
+	height: 177px;
+	text-align: center;
+	color:#FFFFFF ;
+}
+.footer1{
+	height: 40px;
+	padding-top:26px ;
+}
+.footer .footer2{
+	padding-top: 0;
+}
+.footer1 a{
+	color: #ffffff;
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+.footer1 span{
+	color: #ffffff;
+	padding: 0 8px 0 8px;
+}
+.footer1 p{
+	line-height: 24px;
+	margin-top: 5px;
+}
+.footer3{
+	margin-top: 28px;
+}
+.top{
+	height: 98px;
+}
+.top img{
+	height: 98px;
+}
+.top a{
+	float: left;
+}
+.top span{
+	display: inline-block;
+    font-size: 22px;
+    color: #999;
+    float: left;
+    margin-top: 36px;
+}
+.top .header-line {
+    display: inline-block;
+    width: 2px;
+    height: 44px;
+    vertical-align: middle;
+    background-color: #ccc;
+    margin: 0 18px;
+    margin-top: 27px;
+}
+.topright{
+	width: 190px;
+	height: 98px;
+	float: right;
+	vertical-align: middle;
+}
+ .topi{
+	display: inline-block;
+    width: 19px;
+    height: 19px; 
+    padding-right: 10px;
+    background: url(../img/images/phone-logo.png) no-repeat;
+    margin-top: 37px;
+    float: right;
+}
+.top p{
+	display: inline-block;
+	margin-top: 34px;
+	line-height: 24px;
+	float: right;
+	font-size: 14px;
+}
+.con{
+	height: 536px;
+	background: url(../img/images/login_background1.jpg);
+	position: relative;
+}
+.con1{
+	width: 340px;
+    float: right;
+    margin: 30px 0;
+    background: #fff;
+    padding:0 30px;
+    position: absolute;
+    right: 40px;
+}
+.content{
+	background: #fff;
+  	
+}
+.content p{
+	font-size: 20px;
+    line-height: 90px;
+    text-align: center;
+    color: #000;
+}
+input{
+	height: 48px;
+	border: 1px solid #ccc;
+	outline: none;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	padding: 0 19px;
+}
+.iphone,.pwd,.pwd2{
+	width: 302px;
+	
+}
+.enter{
+	width: 342px;
+	font-size: 20px;
+	color: white;
+	background:#333 ;
+	margin: 14px 0;
+}
+.code{
+	width: 144px;
+}
+.btn1{
+	width: 130px;
+	height: 50px;
+	margin-left: 26px;
+	margin-top:8px ;
+	float: right;
+}
+.con-footer{
+	height: 44px;
+	font-size: 13px;
+}
+.check{ 
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	float: left;
+	margin-top: 6px;
+	margin-left: 20px;
+}
+.con-footer span{
+	color: #999
+}
+.con-footer b{
+	color: #333
+}
+.con-footer a{
+	    color: #ff9900;
+	    margin-left: 12px;
+}
+.enter:hover{
+	background: #a60000;
+	cursor: pointer;
+	
+}
+.content i{
+	display: block;
+	line-height: 20px;
+	 
+}
+.content i span{
+	color: red;
+	margin: 0 3px;
+}
